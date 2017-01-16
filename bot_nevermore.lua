@@ -10,7 +10,7 @@ local previousstate = STATE_IDLE
 
 function Think()
   if(state ~= previousstate) then
-    bot:Action_Chat(state,true)
+    --bot:Action_Chat(state,true)
     previousstate = state
   end
   Consider()
@@ -100,7 +100,7 @@ function farm_mid()
   end
   --Kann ich ein creep sofort töten? Direkt hitten
   if(weakest_creep ~= nil) then
-    bot:Action_Chat('hit creepo',true)
+    --bot:Action_Chat('hit creepo',true)
     bot:Action_AttackUnit(weakest_creep,true)
     return
   end
