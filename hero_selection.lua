@@ -1,7 +1,3 @@
--- hero_selection.lua
-
--------------------------------------------------------------------------
-
 function Think()
 
     if ( GetTeam() == TEAM_RADIANT ) then
