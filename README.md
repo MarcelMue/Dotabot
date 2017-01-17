@@ -5,7 +5,7 @@ This is currently a full rewrite of existing bots. Shadowfiend is a bad lasthitt
 ### Tips
 The `dota_bot_reload_scripts` command lets you reload your bot sourcecode ingame when entered into the game console.<br />
 The command `host_timescale 4.0` lets you speed up time by factor 4 or more to save time.<br />
-The command `sv_cheats 1; dota_all_vision 1;` gives all vision. <br />
+The command `sv_cheats 1; dota_all_vision 1; bind "F8" "dota_bot_reload_scripts"; ` is amazing. <br />
 Experimentally you can also host a dedicated server on your machine with headless bots as described in this [thread](http://dev.dota2.com/showthread.php?t=273803).
 ### Resources
 [API description](https://developer.valvesoftware.com/wiki/Dota_Bot_Scripting) <br />
