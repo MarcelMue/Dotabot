@@ -380,13 +380,13 @@ STATE_LASTHIT = {
         --Try Last Hitting
         local safety = 3
         local dmg = ncreep:GetActualDamage(bot:GetAttackDamage(),DAMAGE_TYPE_PHYSICAL) - bot:GetBaseDamageVariance()/2 - safety
-        local atk_time = bot:GetAttackPoint() / ( 0 + bot:GetAttackSpeed()) -- i think 1+ is not needed here
+        local atk_time = bot:GetAttackPoint() / ( 1 + bot:GetAttackSpeed())
         local travel_time =  GetUnitToUnitDistance(bot,ncreep) / 1000
         local dmg_delay =  atk_time + travel_time
         local hp = ncreep:GetHealth() + M:EstimateCreepHealthDeltaPerSec(ncreep) * dmg_delay
 
         --only attack if in ck range AND doesnt cancle attack animation
-        if(hp < dmg) and (GameTime() - STATE_LASTHIT.last_attack_time > atk_time) then
+        if(hp < dmg and hp > 0) and (GameTime() - STATE_LASTHIT.last_attack_time > atk_time) then
             bot:Action_AttackUnit(ncreep,true)
             STATE_LASTHIT.last_attack_time = GameTime()
         end
